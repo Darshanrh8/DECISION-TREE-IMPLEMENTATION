@@ -57,6 +57,7 @@ from sklearn.model_selection import train_test_split
 from sklearn.metrics import accuracy_score, classification_report
 
 %matplotlib inline
+
 📥 Step 2: Load the Dataset
 python
 Copy
@@ -69,12 +70,15 @@ y = iris.target
 df = pd.DataFrame(X, columns=iris.feature_names)
 df['target'] = y
 df.head()
+
 🔀 Step 3: Split the Dataset
 python
 Copy
 Edit
 X_train, X_test, y_train, y_test = train_test_split(
     X, y, test_size=0.25, random_state=42)
+
+
 🌳 Step 4: Define the Model & Visualize the Tree
 python
 Copy
@@ -91,6 +95,7 @@ plot_tree(model,
           filled=True)
 plt.title("Decision Tree Visualization")
 plt.show()
+
 📊 Step 5: Make Predictions & Evaluate the Model
 python
 Copy
@@ -104,6 +109,11 @@ report = classification_report(y_test, y_pred, target_names=iris.target_names)
 
 print(f"Accuracy: {score:.2f}")
 print("\nClassification Report:\n", report)
+
+
+
+
+
 🧠 Summary and Reflections
 This task helped me:
 
@@ -116,7 +126,3 @@ Practice splitting datasets properly
 Visualize the internal structure of a decision tree
 
 Gain confidence working with Jupyter/Colab environments
-
-yaml
-Copy
-Edit
